@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <TodoList :todos="todos" />
+    <TodoList :todos="todos" @delete-todo="deleteTodo"/>
   </div>
 </template>
 
@@ -18,6 +18,12 @@ export default {
   },
   comments: {
     TodoList
+  },
+  methods: {
+    deleteTodo(index) {
+      console.log(`Remove: ${this.todos[index]}`);
+      this.todos.splice(index,1);
+    }
   }
 }
 </script>

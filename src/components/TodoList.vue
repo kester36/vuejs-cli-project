@@ -1,13 +1,18 @@
 <template>
     <ul>
-        <li v-for="(todo, index) in todos" :key="index">{{ todo }}</li>
+        <li v-for="(todo, index) in todos" @click="deleteTodo(index)" :key="index">{{ todo }}</li>
     </ul>
 </template>
 
 <script>
     export default {
         // name: "TodoList",
-        props: ['todos']
+        props: ['todos'],
+        methods: {
+            deleteTodo(index) {
+                this.$emit('delete-todo', index)
+            }
+        }
     }
 </script>
 
