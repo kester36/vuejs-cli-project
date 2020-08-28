@@ -1,12 +1,13 @@
 <template>
     <ul>
-        <li>1. Example</li>
+        <li v-for="(todo, index) in todos" :key="index">{{ todo }}</li>
     </ul>
 </template>
 
 <script>
     export default {
-        name: "TodoList"
+        // name: "TodoList",
+        props: ['todos']
     }
 </script>
 

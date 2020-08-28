@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <TodoList />
+    <TodoList :todos="todos" />
   </div>
 </template>
 
@@ -11,6 +11,11 @@
 export default {
   name: 'App',
   components: {TodoList},
+  data() {
+    return {
+      todos: ['Renovation', 'Buy products', 'Learn VueJS']
+    }
+  },
   comments: {
     TodoList
   }
