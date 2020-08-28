@@ -5,8 +5,7 @@
 </template>
 
 <script>
-
-  import TodoList from "./components/TodoList";
+import TodoList from "./components/TodoList";
 
 export default {
   name: 'App',
@@ -21,13 +20,8 @@ export default {
   },
   methods: {
     deleteTodo(index) {
-      console.log(`Remove: ${this.todos[index]}`);
       this.todos.splice(index,1);
     }
   }
 }
 </script>
-
-<style>
-
-</style>
